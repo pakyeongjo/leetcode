@@ -10,8 +10,10 @@ def print_duration(message, duration):
             print(f"{message}: {int(duration):,}s")
     elif duration * 1000 > 1:
         print(f"{message}: {int(duration * 1000):,}ms")
-    else:
+    elif duration * 1000000 > 1:
         print(f"{message}: {int(duration * 1000000):,}us")
+    else:
+        print(f"{message}: < 1us")
 
 
 def print_avg_duration(duration):
